@@ -92,7 +92,8 @@
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
               <p>
-               I am currently a second-year computer science major, concentrated in Data Science and Artificial Intelligence at the University of San Diego. I was born and raised in Phnom Penh, Cambodia, and recently moved to San Diego in the Fall of 2024.
+               I am a disciple of Jesus that so happened to be majoring in Computer Science, concentrating in Data Science and Artificial Intelligence at the University of San Diego.
+               I was born and raised in Phnom Penh, Cambodia, and made my journey to San Diego after transfering from Pennsylvania, and Texas.
               </p>
               <p>
                 Aspiring Data Scientist/Artificial Intelligence Builder
@@ -126,10 +127,10 @@
             <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Projects</h2>
           </div>
         </div>
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
           
-            <img src="images/Elevator.png" alt="UML Diagram of Elevator Simulation" class="img-fluid">
+            <img src="images/Elevator.png" alt="UML Diagram of Elevator Simulation" class="img-fluid elevator-img">
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
@@ -153,10 +154,27 @@
 
 
             </div>
-
-            
-
           </div>
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+          
+            <img src="images/World Cup Simulator.png" alt="UML Diagram of World Cup Simulator" class="img-fluid simulator-img">
+          
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>World Cup Winner Simulation</h3>
+              <p>
+                With the 2026 FIFA World Cup just around the corner, this project was built to answer a question every football fan is already asking; who is going to win? Rather than relying on opinion, the goal was to let real data decide. This project was an opportunity to combine a passion for football with the software design principles covered in class, resulting in a simulator that uses decades of real international football statistics to predict the most likely World Cup champion.
+              </p>
+              <p>
+                The World Cup Simulator takes real statistics for every qualified team and simulates the entire tournament from the group stage all the way to the final. Teams are loaded from a real data file containing historical information including overall strength ranking, total games played, wins, losses, goals scored, and goals conceded. Groups are played out with every team facing every other team, points are accumulated, and the top teams advance to the knockout bracket where single elimination rounds determine the champion.Every match has an element of chance, just like in real football, results differ every time the simulator runs. Stronger teams win more often but upsets can and do happen. Running the simulator thousands of times produces a win probability for every team and it brings the drama and unpredictability of the World Cup to life in a way that pure opinion never could. 
+              </p>
+              <p>
+                The project was built in Java, which was a natural fit given the course focus on object oriented design. The tournament maps cleanly onto real world objects that any football fall would recognize such as teams, matches, groups, standings, and a bracket, where each becoming its own self-contained piece of the system with a clearly defined responsibility. The most important design decision was how to predict match otucomes. Rather than locking in on one fixed prediction method, the system was designed so that the prediction approach could be swapped out at any time without rebuilifding everything else. This follows the Strategy design pattern. The prediction method that was implemented combines four pieces of real historical data which are overall strength ranking, win rate, goal difference per game, and defensive strength, where each were given a different weight depending on how reliable it is as a predictor. Goal scoring was also designed to feel realistic. Rather than picking a random number, a mathematical model call thed Poisson distribution was used, which reflects how goals are actually distributed in real matches. 
+              </p>
+              <p>
+                I was repsonsible for implementing the prediction engine and the match simulation specifically how the simulator decides who wins each match and by how many goals. The prediction engine takes a team's real historical statistics and combines them into a single win probability using four weighted signals. I researched how different statistics relate to winning in international football and made deliberate decisions about how much influence each singal should carry. The match simulation uses that probability to play each match which determines the outcome, generating a realistic scoreline using the Poisson distribution, handling draws differently for group stage versus knockout matches, and simulating penalty shootouts when needed. Throughout the implementation I followed test driven development strictly where every piece of functionality had tests written before and implementation itself. This forced clear thinking about what each componenet was supposed to do writing it and caught several subtle problems early. Testing something that invovles randomness was particularly interesting challenge. I solved it by designing a system so the soruce of randomness could be replaced with a controlled version during testing, prodciuing predictable and repeatable results every single time. This technique is known as dependency injection, and applying it here gave me full confidence that the match simulation was working correctly under every possible outcome. 
+              </p>
         </div>
       </div>
       
@@ -193,7 +211,7 @@
           <div class="col-md-12 text-center">
             <p class="mb-0">
               <span class="flaticon/font/linkedin.png", style="padding-top: 10px;"></span>
-              <a href="">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/jet-tang-ro-starkweather-a47861275/">LinkedIn</a>
             </p>
           </div>
         </div>

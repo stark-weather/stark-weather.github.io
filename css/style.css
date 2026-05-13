@@ -2025,3 +2025,23 @@ figure figcaption {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+.elevator-img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.52);
+    transform-origin: center;
+    margin-top: 40px;
+}
+
+.elevator-divider {
+    margin: 80px 0;
+}
+
+.simulator-img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.52);
+    transform-origin: center;
+    margin-top: 40px;
+}
